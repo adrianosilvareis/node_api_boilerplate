@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
     "chai": "^4.2.0",
     "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
@@ -11,6 +12,7 @@
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import-helpers": "^1.0.2",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
@@ -28,5 +30,13 @@
     "test": "cross-env NODE_ENV=test jest",
     "start": "cross-env NODE_ENV=development npx nodemon index.js",
     "server": "cross-env NODE_ENV=production npx nodemon index.js"
+  },
+  "dependencies": {
+    "boom": "^7.3.0",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-helmet": "^5.2.0",
+    "koa-jwt": "^3.6.0",
+    "koa-router": "^7.4.0"
   }
 }

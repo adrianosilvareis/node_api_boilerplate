@@ -17,8 +17,21 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018
   },
-  plugins: ['prettier'],
+  plugins: ['prettier', 'import-helpers'],
   rules: {
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    'import-helpers/order-imports': [
+      'warn',
+      {
+          newlinesBetween: 'always', // new line between groups
+          groups: [
+              '/^koa/',
+              'module',
+              '/^@/',
+              ['parent', 'sibling', 'index'],
+          ],
+          alphabetize: { order: 'asc', ignoreCase: true },
+      },
+  ],
   }
 }
